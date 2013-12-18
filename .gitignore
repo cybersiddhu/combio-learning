@@ -2,3 +2,5 @@
 .zsh_history
 .viminfo
 .gitconfig
+.cache/
+.neocomplcache/
