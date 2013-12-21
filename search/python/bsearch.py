@@ -48,13 +48,11 @@ def bsearch_recursive(list, item, sorted=True):
 
     if not sorted:
         list.sort()
-    if not sorted:
-        list.sort()
 
     if not list:
         return False
     else:
-        mid = len(list)//2
+        mid = len(list)//2 - 1
         if list[mid] == item:
             return True
         else:
