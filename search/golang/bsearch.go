@@ -27,19 +27,23 @@ func BsearchIterative(list []int, item int) bool {
 
 func BsearchRecursive(list []int, item int) bool {
     last := len(list)
-    if last == 0 {
-        return false
+    if last == 1 {
+        if item == list[0] {
+            return true
+        } else {
+            return false
+        }
     }
     if !sort.IntsAreSorted(list) {
         sort.Ints(list)
     }
-    middle := (0 + last) / 2
-    if list[middle] == item {
+    middle := (last / 2) - 1
+    if item == list[middle] {
         return true
     } else if item > list[middle] {
-        BsearchRecursive(list[middle+1:], item)
+        return BsearchRecursive(list[middle+1:], item)
     } else {
-        BsearchRecursive(list[:middle-1], item)
+        return BsearchRecursive(list[:middle], item)
     }
     return false
 }
