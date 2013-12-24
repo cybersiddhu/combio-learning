@@ -5,3 +5,4 @@
 .cache/
 .neocomplcache/
 .python-version
+*pycache*/
