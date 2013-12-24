@@ -1,4 +1,6 @@
 """Functions for various sorting algorithms """
+
+
 def bubblesort_descending(num):
     """ In place descending bubble sort """
     for passnum in range(len(num) - 1, 0, -1):
@@ -30,6 +32,7 @@ def selectionsort_ascending(num):
                 maxpos = loc
             #put them in correct position by swapping
             num[fillslot], num[maxpos] = num[maxpos], num[fillslot]
+    return True
 
 
 def insertionsort_ascending(num):
