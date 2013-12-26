@@ -59,3 +59,29 @@ def insertionsort_ascending(num):
             num[pos] = item
 
     return True
+
+
+def shellsort_ascending(num):
+    """In place shell sort
+    """
+    gapseq = [701, 301, 132, 57, 23, 10, 4, 1]
+
+    for gap in gapseq:
+        #now it's basically an insertion sort using the gap value
+        outer = True
+        while gap < len(num) and outer:
+            for loc in range(gap, len(num)):
+                pos = loc
+                item = num[loc]
+                inner = True
+                while pos > gap - 1 and inner:
+                    if item < num[pos - gap]:
+                        num[pos] = num[pos - gap]
+                        pos = pos - gap
+                    else:
+                        inner = False
+                if loc != pos:
+                    num[pos] = item
+            outer = False
+
+    return True
