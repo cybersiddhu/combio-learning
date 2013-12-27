@@ -61,10 +61,14 @@ def insertionsort_ascending(num):
     return True
 
 
-def shellsort_ascending(num):
+def shellsort_ascending(num, gapseq=None):
     """In place shell sort
     """
-    gapseq = [701, 301, 132, 57, 23, 10, 4, 1]
+    if gapseq is None:
+        gapseq = [701, 301, 132, 57, 23, 10, 4, 1]
+    else:
+        if type([]) != type(gapseq):
+            gapseq = [701, 301, 132, 57, 23, 10, 4, 1]
 
     for gap in gapseq:
         #now it's basically an insertion sort using the gap value

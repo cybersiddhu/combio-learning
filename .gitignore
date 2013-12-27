@@ -6,3 +6,4 @@
 .neocomplcache/
 .python-version
 *pycache*/
+*.pyc
