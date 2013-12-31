@@ -1,8 +1,8 @@
 """Unit tests for all sorting algorithm"""
 import unittest
-from sort import (insertionsort_ascending,
-                  selectionsort_ascending, shellsort_ascending,
-                  mergesort_ascending)
+from algorithms import (insertionsort_ascending,
+                        selectionsort_ascending, shellsort_ascending,
+                        mergesort_ascending)
 
 
 # pylint: disable=R0904
